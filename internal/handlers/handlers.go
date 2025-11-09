@@ -71,7 +71,7 @@ func HandlerUpload(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Ошибка записи результата: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
-
+	// change
 	// Отправляем ответ пользователю
 	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 	fmt.Fprintf(w, "Файл успешно конвертирован!\n\nРезультат:\n%s", result)
